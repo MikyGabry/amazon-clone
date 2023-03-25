@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a new book!</title>
-</head>
-<body>
+<%- include('../partials/header.ejs', {name: "Create a new book"}) %>
     <h1>Add a new book to Better Amazon!</h1>
     <form action="/books" method="POST">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title">
         <br>
         <label for="author">Author:</label>
-        <input type="text" name="author" id="title">
+        <input type="text" name="author" id="author">
         <br>
         <label for="price">Price:</label>
-        <input type="text" name="price" id="title">
+        <input type="text" name="price" id="price">
         <br>
         <input type="submit" value="Add this book now">
     </form>
-</body>
-</html>
+<%- include('../partials/footer.ejs') %>

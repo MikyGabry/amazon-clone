@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<%- include('../partials/header.ejs', {name: "All books"}) %>
     <h1>Here are all of my books!</h1>
-    <% for (let i = 0; i < books.length; i++) { %>
-        <h2>Title: <%= books[i].title %></h2>
-        <h3>Author: <%= books[i].author %></h3>
-        <h3>Price: $<%= books[i].price %></h3>
+    <% for(let i = 0; i < books.length; i++) { %>
+        <a href='books/<%= i %>'>
+            <h2>Title: <%= books[i].title %></h2>
+            <h3>Author: <%= books[i].author %></h3>
+            <h3>Price: $<%= books[i].price %></h3>
+        </a>
         <hr>
     <% } %>
-</body>
-</html>
+<%- include('../partials/footer.ejs') %>

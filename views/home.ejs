@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A better amazon!</title>
-</head>
-<body>
+<%- include('./partials/header.ejs', {name: "Homepage"}) %>
     <h1>We're here to take some of that Bezos money!</h1>
-</body>
-</html>
+    <% for(let i = 0; i < specials.length; i++) { %>
+        <h2>Name: <%= specials[i].name %></h2>
+        <h2>Price: $<%= specials[i].price %></h2>
+        <h2>Description: <%= specials[i].description %></h2>
+    <% } %>
+<%- include('./partials/footer.ejs') %>
