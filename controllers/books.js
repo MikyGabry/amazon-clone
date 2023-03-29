@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
-let { books } = require('../models');
-//const { books } = require('../models'); // * Array destructuring
+const { books } = require('../models'); // * Array destructuring
 // Array destructuring. That means if I go to models/index.js, which is the file I'm requiring, I expect that it's exporting an object. I only want the value of books from that object. It creates a variable books that's set to the value of the books key in the export for this file.
-let { books } = require('../models');
 
 router.get('', async (req, res, next) => {
     try {

@@ -7,7 +7,7 @@ const musicController = require('./controllers/music')
 const sportsEquipmentController = require('./controllers/sportsEquipment')
 
 //Funziona creando variabili (books, music ecc..) impostandoli con i valori delle key nell'oggetto esportato dal fine a cui fai riferimento.
-// const { books, householdProducts, music, sportEquipment } = require('./models') // * REDISTRACTURE
+// const { books, householdProducts, music, sportEquipment } = require('./models') // * ARRAY DESTRUCTURING
 // console.log(householdProducts) //da immediatamente il risultato senza aggiornare la pagina web
 const { specials } = require('./models')
 // I want to specify that all my views for res.render are going to be in a directory I call views. 
