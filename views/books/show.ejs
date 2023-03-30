@@ -2,4 +2,6 @@
     <h1>Title: <%= book.title %></h1>
     <h2>Author: <%= book.author %></h2>
     <h2>Price: $<%= book.price %></h2>
+    <a href="/books/<%= book._id %>/edit">Edit this book</a>
+    <a href="/books/<%= book._id %>/delete">Delete this book</a>
 <%- include('../partials/footer.ejs') %>

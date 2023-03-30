@@ -3,9 +3,9 @@
     <% for(let i = 0; i < books.length; i++) { %>
         <a href='books/<%= books[i]._id %>'>
             <h2>Title: <%= books[i].title %></h2>
+        </a>
             <h3>Author: <%= books[i].author %></h3>
             <h3>Price: $<%= books[i].price %></h3>
-        </a>
         <hr>
     <% } %>
 <%- include('../partials/footer.ejs') %>

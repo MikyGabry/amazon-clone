@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs', {name: "Edit " + book.title}) %>
+    <h1>Edit the book <%= book.title %> by <%= book.author %></h1>
+    <form method="POST" action="/books/<%= book._id %>?_method=PUT">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%=book.title%>" />
+        <br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author"  value=<%= book.author %>>
+        <br>
+        <label for="price">How greedy are you? Price: </label>
+        <input type="text" name="price" id="price"  value=<%= book.price %>>
+        <br>
+        <input type="submit" value="Edit <%= book.title %>">
+    </form>
+</body>
+</html>
